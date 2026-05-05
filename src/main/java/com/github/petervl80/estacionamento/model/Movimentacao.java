@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
@@ -31,7 +32,7 @@ public class Movimentacao {
     private LocalDateTime dataSaida;
 
     @Column(name = "valor_pago")
-    private Double valorPago;
+    private BigDecimal valorPago;
 
     public Movimentacao(Veiculo veiculo, Vaga vaga, LocalDateTime dataEntrada) {
         this.veiculo    = veiculo;
